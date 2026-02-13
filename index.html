@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chúc Tết 6368</title>
+</head>
+<body style="text-align:center; margin-top:100px; font-family:Arial;">
+
+  <h1>Nhập tên của bạn 🎉</h1>
+
+  <input type="text" id="nameInput" placeholder="Nhập tên..." />
+  <button onclick="goToWish()">Nhận lời chúc</button>
+
+  <script>
+    function goToWish() {
+      const name = document.getElementById("nameInput").value;
+      if (name.trim() === "") {
+        alert("Vui lòng nhập tên!");
+        return;
+      }
+      window.location.href = "wish.html?name=" + encodeURIComponent(name);
+    }
+  </script>
+
+</body>
+</html>
+
+
